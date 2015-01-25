@@ -13,14 +13,14 @@ module.exports = function(grunt) {
             options: {
                 livereload: true
             },
-            files: ['<%= jshint.files %>', 'dist/index.html'],
+            files: ['<%= jshint.files %>', 'src/**'],
             tasks: []
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
-
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.registerTask('default', ['watch']);
 
 };
